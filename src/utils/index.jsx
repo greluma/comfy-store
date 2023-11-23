@@ -12,3 +12,12 @@ export const formatPrice = (price) => {
     currency: "USD",
   }).format((price / 100).toFixed(2));
 };
+
+export const generateAmountOptions = (number) => {
+  return Array.from({ length: number }, (_, index) => {
+    return (
+      <option key={index} value={index + 1}>{index + 1}</option>
+    )
+  })
+
+}

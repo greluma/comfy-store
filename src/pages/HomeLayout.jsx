@@ -4,8 +4,8 @@ import { Header, Navbar } from "../components"
 const HomeLayout = () => {
     return (
         <>
-            <Header />
             <Navbar />
+            <Header />
             <section className="align-element py-20">
                 <Outlet />
             </section>
