@@ -7,7 +7,7 @@ import { About, Cart, Checkout, Error, HomeLayout, Landing, Login, Orders, Produ
 import { ErrorElement } from "./components";
 
 // * loaders
-import { landingLoader, singleProductLoader } from "./utils/loaders";
+import { landingLoader, productsLoader, singleProductLoader } from "./utils/loaders";
 
 // * actions
 
@@ -25,6 +25,8 @@ const router = createBrowserRouter([
     {
       path: 'products',
       element: <Products />,
+      errorElement: <ErrorElement />,
+      loader: productsLoader,
     },
     {
       path: 'products/:id',
