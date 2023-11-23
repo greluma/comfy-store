@@ -1,0 +1,20 @@
+import { FormInput, SubmitBtn } from "../components"
+import { Link, Form } from "react-router-dom"
+
+const Register = () => {
+    return (
+        <section className="h-screen grid place-items-center">
+            <Form method="POST" className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4">
+                <h4 className="text-center text-3xl font-bold">Register</h4>
+                <FormInput name="username" type="text" label="username" defaultValue='mano' />
+                <FormInput name="email" type="email" label="email" defaultValue='test@test.com' />
+                <FormInput name="password" type="password" label="password" defaultValue='secret' />
+                <div className="mt-4">
+                    <SubmitBtn text="register" />
+
+                </div>
+                <p className="text-center">Already a member?<Link to='/login' className="ml-2 link-hover link-primary capitalize">login</Link> </p>
+            </Form>   </section>
+    )
+}
+export default Register
