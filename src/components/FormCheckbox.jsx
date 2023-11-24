@@ -6,7 +6,6 @@ const FormCheckbox = ({ label, name, defaultValue, size }) => {
         <div className="form-control items-center">
             <label htmlFor={name} className="cursor-pointer">
                 <span className="label-text capitalize">{label}</span>
-
             </label>
             <input type="checkbox" name={name} id={name} defaultChecked={defaultValue} className={`mt-1 checkbox checkbox-primary ${size}`} />
         </div>
@@ -16,7 +15,7 @@ const FormCheckbox = ({ label, name, defaultValue, size }) => {
 FormCheckbox.propTypes = {
     label: PropTypes.string,
     name: PropTypes.string,
-    defaultValue: PropTypes.string,
+    defaultValue: PropTypes.bool,
     size: PropTypes.string,
 };
 

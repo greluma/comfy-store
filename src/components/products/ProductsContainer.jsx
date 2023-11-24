@@ -22,7 +22,7 @@ const ProductsContainer = () => {
         <>
             {/* HEADER */}
             <div className="flex justify-between items-center mt-8 border-b border-base-300 pb-5">
-                <h4 className="font-medium text-md">{total ? `${total} ${total === 1 ? 'Product' : 'Products'}` : 'Total No Available'}</h4>
+                <h4 className="font-medium text-md">{total ? `${total} ${total === 1 ? 'Product' : 'Products'}` : '0'}</h4>
                 <div className="flex gap-x-4">
                     <button type="button" onClick={toggleView} className={setActiveStyles('grid')}>
                         <BsFillGridFill />
