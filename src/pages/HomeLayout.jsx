@@ -4,8 +4,8 @@ import { Header, Loading, Navbar } from "../components"
 const HomeLayout = () => {
     const { state } = useNavigation()
     return <>
-        <Navbar />
         <Header />
+        <Navbar />
         {state === "loading" ? <Loading /> : <section className="align-element py-20">
             <Outlet />
         </section>}
