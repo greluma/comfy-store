@@ -10,6 +10,9 @@ import { ErrorElement } from "./components";
 import { landingLoader, productsLoader, singleProductLoader } from "./utils/loaders";
 
 // * actions
+import { loginAction, registerAction } from "./utils/actions";
+
+import { store } from "./store";
 
 const router = createBrowserRouter([
   {
@@ -60,11 +63,13 @@ const router = createBrowserRouter([
     path: '/login',
     element: <Login />,
     errorElement: <Error />,
+    action: loginAction(store)
   },
   {
     path: '/register',
     element: <Register />,
     errorElement: <Error />,
+    action: registerAction
   }
 ]);
 

@@ -16,8 +16,7 @@ const getThemeFromLocalStore = () => {
 };
 
 const initialState = {
-  user: { userName: "mano", theme: getThemeFromLocalStore() },
-  //   user: null,
+  user: JSON.parse(localStorage.getItem("user")) || null,
 };
 
 const userSlice = createSlice({
@@ -25,8 +24,11 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logInUser: (state, action) => {
-      console.log(action);
+      const { username } = action.payload;
+      state.user = { userName: username, theme: getThemeFromLocalStore() };
+      localStorage.setItem("user", JSON.stringify(state.user));
     },
+
     logOutUser: (state) => {
       state.user = null;
       localStorage.removeItem("user");

@@ -8,9 +8,10 @@ const Hero = () => {
     return (
         <div className='grid lg:grid-cols-2 gap-24 items-center'>
             <div>
-                <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:6xl capitalize'> we are changing the way people shop </h1>
+                <h1 className='max-w-2xl text-4xl font-bold sm:6xl uppercase text-primary tracking-widest mb-4'> Comfy Store</h1>
                 {/* cspell:disable */}
-                <p className='mt-8 max-w-xl text-lg leading-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed illum sapiente ea magni debitis totam nobis, tempora suscipit quod.</p>
+                <h3 className='max-w-2xl text-2xl font-bold sm:4xl capitalize tracking-wider' >we are changing the way people shop</h3>
+                <p className='mt-8 max-w-xl text-lg leading-8'> <span className='text-2xl text-primary tracking-wider pr-1 font-bold'>Our Mission</span>  Is to enhance your home with furniture that combines comfort, quality, and style, creating spaces that inspire and bring joy.</p>
                 {/* cspell:enable */}
                 <div className="mt-10">
                     <Link to='/products' className='btn btn-primary uppercase'> our products</Link>

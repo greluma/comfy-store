@@ -15,7 +15,7 @@ const About = () => {
             </div>
             {/* cspell:disable */}
             <p className="mt-6 text-lg leading-8 max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero officia quam nobis at excepturi, sit impedit harum, nostrum ipsum quasi officiis dolor, earum animi vero adipisci alias facilis eum delectus ad voluptatum voluptate consequuntur repellat aliquid quaerat. Reiciendis, consectetur in!
+                Welcome to Comfy Store, your one-stop destination for home furniture that perfectly blends comfort and style. We are passionate about transforming houses into homes with our wide range of high-quality furniture. Each piece is thoughtfully designed with a focus on comfort, durability, and aesthetics. From plush sofas that make your living room a cozy haven, to sturdy dining tables that bring families together for meals, and sleek desks that create productive home offices, we have something for every room in your home. Our commitment to quality materials and craftsmanship ensures that our furniture not only looks great but also stands the test of time. Discover the Comfy Store difference today and create a home that you love.
             </p>
             {/* cspell:enable */}
         </>
