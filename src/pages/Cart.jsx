@@ -3,7 +3,6 @@ import { CartItemsList, CartTotals, SectionTitle } from "../components"
 import { useSelector } from "react-redux"
 
 const Cart = () => {
-    // TODO user
     const user = 'null';
     const numItemsInCart = useSelector(state => state.cartState.numItemsInCart);
 

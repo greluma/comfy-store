@@ -24,9 +24,14 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logInUser: (state, action) => {
-      const { username } = action.payload;
-      state.user = { userName: username, theme: getThemeFromLocalStore() };
+      const { username } = action.payload.user;
+      state.user = {
+        userName: username,
+        theme: getThemeFromLocalStore(),
+        token: action.payload.jwt,
+      };
       localStorage.setItem("user", JSON.stringify(state.user));
+      localStorage.setItem("token", action.payload.jwt);
     },
 
     logOutUser: (state) => {

@@ -10,7 +10,7 @@ const loginAction =
     const data = Object.fromEntries(formData);
     try {
       const response = await customFetch.post("auth/local", data);
-      store.dispatch(logInUser(response.data.user));
+      store.dispatch(logInUser(response.data));
       toast.success("Logged in Successfully");
       return redirect("/");
     } catch (error) {
