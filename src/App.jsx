@@ -7,7 +7,7 @@ import { About, Cart, Checkout, Error, HomeLayout, Landing, Login, Orders, Produ
 import { ErrorElement } from "./components";
 
 // * loaders
-import { landingLoader, productsLoader, singleProductLoader } from "./utils/loaders";
+import { checkoutLoader, landingLoader, productsLoader, singleProductLoader } from "./utils/loaders";
 
 // * actions
 import { loginAction, registerAction } from "./utils/actions";
@@ -51,6 +51,7 @@ const router = createBrowserRouter([
     {
       path: 'checkout',
       element: <Checkout />,
+      loader: checkoutLoader(store),
     },
     {
       path: 'orders',
