@@ -10,7 +10,7 @@ import { ErrorElement } from "./components";
 import { checkoutLoader, landingLoader, productsLoader, singleProductLoader } from "./utils/loaders";
 
 // * actions
-import { loginAction, registerAction } from "./utils/actions";
+import { loginAction, registerAction, checkoutAction } from "./utils/actions";
 
 import { store } from "./store";
 
@@ -52,6 +52,7 @@ const router = createBrowserRouter([
       path: 'checkout',
       element: <Checkout />,
       loader: checkoutLoader(store),
+      action: checkoutAction(store),
     },
     {
       path: 'orders',

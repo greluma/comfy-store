@@ -5,7 +5,7 @@ const CartTotals = () => {
     const { cartTotal, shipping, tax, orderTotal } = useSelector(state => state.cartState);
 
     return (
-        <div className="card bg-base-200 ">
+        <div className="card bg-base-200 border border-base-300">
             <div className="card-body">
                 {/* SUBTOTAL */}
                 <p className="flex justify-between text-xs border-b border-base-300 pb-2">
