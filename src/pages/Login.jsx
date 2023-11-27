@@ -15,12 +15,10 @@ const Login = () => {
                 identifier: 'test@test.com',
                 password: 'secret'
             })
-            console.log(response.data);
             dispatch(logInUser(response.data))
             toast.success('Welcome Guest User')
             navigate('/')
         } catch (error) {
-            console.log(error);
             toast.error('Guest User Login Failed, Please Try Again')
         }
     }

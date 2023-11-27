@@ -37,7 +37,7 @@ const checkoutAction =
         error?.response?.data?.error?.message ||
         "there was an error placing your order";
       toast.error(errorMessage);
-      if (error?.response?.status === 401) {
+      if ([401, 403].includes(error?.response?.status)) {
         return redirect("/login");
       }
       return null;

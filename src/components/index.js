@@ -14,3 +14,4 @@ export { default as Loading } from "./Loading";
 export { default as CartTotals } from "./cart/CartTotals";
 export { default as CartItemsList } from "./cart/CartItemsList";
 export { default as CheckoutForm } from "./CheckoutForm";
+export { default as OrdersList } from "./OrdersList";
