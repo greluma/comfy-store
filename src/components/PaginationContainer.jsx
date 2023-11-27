@@ -3,8 +3,12 @@ import { useLoaderData, useLocation, useNavigate } from "react-router-dom"
 
 const PaginationContainer = () => {
     const { meta: { pagination: { pageCount, page } } } = useLoaderData();
-
-    const pages = [...Array(pageCount).keys()].map(i => i + 1);
+    const pages = () => {
+        if (pageCount > 10) {
+            return Array.from({ length: 10 }, (_, i) => i + 1);
+        }
+        return Array.from({ length: pageCount }, (_, i) => i + 1);
+    }
 
     const { search, pathname } = useLocation();
     const navigate = useNavigate();
@@ -26,7 +30,7 @@ const PaginationContainer = () => {
                 }}>
                     Prev
                 </button>
-                {pages.map((item) => {
+                {pages().map((item) => {
                     return <button key={item} className={`btn btn-xs sm:btn-md border-none join-item ${item === page ? 'bg-base-300 border-base-300' : ''}`} onClick={() => {
                         page === item ? '' : handlePageChange(item)
                     }}>{item}</button>
